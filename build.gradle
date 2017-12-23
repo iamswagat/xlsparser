@@ -1,32 +1,16 @@
-buildscript{
-    ext {
-        poiVersion = 3.17
-    }
-    repositories {
-        maven { url "https://plugins.gradle.org/m2/" }
-    }
-    dependencies {
-        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.6.1"
-    }
-}
-
 group 'org.acme.commercial'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
-apply plugin: "org.sonarqube"
-apply plugin: 'jacoco'
-
+apply plugin: 'idea'
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
 }
 
-jacoco {
-    toolVersion = '0.7.9'
-}
-
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'org.apache.poi:poi-ooxml:3.17'
+    testCompile 'junit:junit:4.12'
+    compileOnly 'org.projectlombok:lombok:1.16.18'
 }
