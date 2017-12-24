@@ -11,6 +11,8 @@ repositories {
 
 dependencies {
     compile 'org.apache.poi:poi-ooxml:3.17'
+    compile 'org.apache.commons:commons-lang3:3.7'
     testCompile 'junit:junit:4.12'
     compileOnly 'org.projectlombok:lombok:1.16.18'
+    compile 'org.slf4j:slf4j-simple:1.7.25'
 }
